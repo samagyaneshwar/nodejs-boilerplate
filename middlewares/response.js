@@ -1,7 +1,6 @@
 const { HTTP_STATUS } = require("../shared/constants");
 
 module.exports = () => {
-
     return (req, res, next) => {
         res.ok = (data) => {
             const obj = { status: HTTP_STATUS.OK, success: true, message: "ok", data: {} };
@@ -49,7 +48,7 @@ module.exports = () => {
         };
 
         res.tooManyRequests = (data) => {
-            const obj = { status: HTTP_STATUS.TOO_MANY_REQUESTS, success: false, message: "Too many request", data: {} };
+            const obj = { status: HTTP_STATUS.TOO_MANY_REQUESTS, success: false, message: "too_many_requests", data: {} };
             return res.status(HTTP_STATUS.TOO_MANY_REQUESTS).json({ ...obj, ...data });
         };
 
