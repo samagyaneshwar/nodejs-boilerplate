@@ -1,9 +1,14 @@
 const express = require("express");
 const app = express();
+
 const morgan = require("morgan");
 const cors = require("cors");
 const cookieSession = require("cookie-session");
+
 const response = require("./middlewares/response");
+const dotenv = require("dotenv");
+dotenv.config({ path: ".env" });
+
 const env = require("./env");
 const routes = require("./routes");
 
@@ -33,6 +38,6 @@ app.use(response());
 // routes
 app.use("/", routes);
 
-app.listen(3000, () => {
-    console.log("CONNECTED");
+app.listen(env.port, () => {
+    console.log("Start server on port %s", env.port)
 });

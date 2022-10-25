@@ -2,13 +2,16 @@ const env = process.env?.NODE_ENV || "local";
 
 const obj = {
     production: {
-        secret: ""
+        secret: "",
+        port: process.env.PORT
     },
     development: {
-        secret: ""
+        secret: "",
+        port: process.env.PORT
     },
     local: {
-        secret: ""
+        secret: "",
+        port: process.env.PORT
     }
 }
 
