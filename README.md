@@ -11,7 +11,7 @@ Create a `.env` file in the project root and add the following variables
 * NODE_ENV - `local`, `development`, `production`
 * PORT - Port number
 
-WE can setup more environments with new NODE_ENV values such as `staging`, `qa` etc., and add configuration in `env/index.js` with new environment value as key name.
+We can setup more environments with new NODE_ENV values such as `staging`, `qa` etc., and add configuration in `env/index.js` with new environment value as key name.
 
 ## Install
 
