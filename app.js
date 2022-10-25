@@ -39,5 +39,5 @@ app.use(response());
 app.use("/", routes);
 
 app.listen(env.port, () => {
-    console.log("Start server on port %s", env.port)
+    console.log("%s server on port %s", env.name, env.port)
 });
