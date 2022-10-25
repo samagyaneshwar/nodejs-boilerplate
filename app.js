@@ -28,7 +28,7 @@ app.use(
         keys: ["key1", "key2"],
     })
 );
-response(app);
+app.use(response());
 
 // routes
 app.use("/", routes);
